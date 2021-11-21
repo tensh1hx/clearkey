@@ -1,6 +1,5 @@
 import os
 import sys
-from locate import this_dir
 import re
 
 os.system('cls')
@@ -11,8 +10,6 @@ output = os.popen('netsh wlan show profiles').read()
 
 wifis = re.sub('''\nProfiles on interface Wi-Fi?(.*?)User profiles
 -------------\n''', '', output, flags=re.DOTALL)
-
-dir_path = str(this_dir())
 
 content = wifis
 toDel = "    All User Profile     : "
