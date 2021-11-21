@@ -80,7 +80,7 @@ else:
     try:
         targ = wifi[selectNet]
     except IndexError:
-        print('\033[91m' + "\n[!] This element doesn't exist!")
+        print('\033[91m' + "[!] This element doesn't exist!\n")
         sys.exit()
     os.popen('netsh wlan show profiles NAME="{}" key=clear'.format(targ))
     output = os.popen('netsh wlan show profiles NAME="{}" key=clear'.format(targ)).read()
